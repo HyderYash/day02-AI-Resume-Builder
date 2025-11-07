@@ -105,8 +105,8 @@ export async function generateExperienceBullets(experience: Experience): Promise
     // If not JSON, split by newlines and clean up
     const bullets = response
       .split("\n")
-      .map(line => line.replace(/^[-•*]\s*/, "").trim())
-      .filter(line => line.length > 0)
+      .map((line: string) => line.replace(/^[-•*]\s*/, "").trim())
+      .filter((line: string) => line.length > 0)
       .slice(0, 5);
     
     return bullets.length > 0 ? bullets : mockResponse.bullets;
@@ -130,8 +130,8 @@ export async function refineSkills(skills: string[]): Promise<string[]> {
 
   const refined = response
     .split("\n")
-    .map(line => line.replace(/^[-•*\d.]\s*/, "").trim())
-    .filter(line => line.length > 0 && line.length < 50);
+    .map((line: string) => line.replace(/^[-•*\d.]\s*/, "").trim())
+    .filter((line: string) => line.length > 0 && line.length < 50);
 
   return refined.length > 0 ? refined : skills;
 }
