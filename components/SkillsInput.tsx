@@ -157,7 +157,7 @@ export function SkillsInput({ skills, onChange, onRefine, isRefining }: SkillsIn
         </div>
         
         <p className="text-xs text-gray-500 dark:text-gray-400 px-1">
-          💡 Tip: Add multiple skills at once by separating them with commas (e.g., "React, Node.js, MongoDB")
+          💡 Tip: Add multiple skills at once by separating them with commas (e.g., &quot;React, Node.js, MongoDB&quot;)
         </p>
       </div>
 
